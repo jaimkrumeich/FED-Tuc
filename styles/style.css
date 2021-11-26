@@ -1,5 +1,472 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
 }
+
+:root {
+
+  /*colors*/
+  --accent-color: #fec334;
+  --heading-color: white;
+  --background-color: #102868;
+  --text-color: #102868;
+  --textwhite-color:white;
+  --button-color: rgb(255, 255, 255);
+  --button-gradient: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(146, 160, 195, 1) 0%, rgba(16, 40, 104, 1) 100%);
+
+  /*fonts*/
+  --font-family: "Gotham", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Generieke elementen */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-flow: row wrap;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  height:110px;
+  width: 100%;
+  background-color: var(--accent-color);
+}
+
+footer{
+  background-color:white;
+  display:flex;
+  flex-direction: column;
+}
+
+footer::before{
+  content:'';
+  display:block;
+  margin-top:.5em;
+  height:46px;
+  background-image: url("../images/zig-zag.png");
+  background-repeat:repeat-x;
+  width:100%;
+}
+
+
+
+
+/* Navigatie in de header */
+
+nav ul  {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1em;
+  color: var(--textwhite-color);
+  background-color:var(--background-color);
+  list-style: outside none none;
+}
+
+
+/* Block-level Elements - Sections en articles */
+
+/*Specifiek section */
+footer>section{
+  height:300px;
+  width:100%;
+  background-color: var(--background-color);
+}
+
+/* Sections pseudo */
+section:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  position: relative;
+  overflow: scroll;
+  margin-top:-1em;
+}
+
+section:nth-of-type(2) {
+  display: flex;
+  flex-direction:column;
+  overflow:hidden;
+  justify-content: center;
+  padding-bottom:1em;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 230, 170, 1) 29%, rgba(254, 195, 52, 1) 100%);
+}
+
+section:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+}
+
+section:nth-of-type(4) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section:nth-of-type(5) {
+  display: flex;
+  padding:1em 1em 3em 1em;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+/* Articles */
+section:nth-of-type(1)>article {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+section:nth-of-type(2)>article {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width:100%;
+  padding: 2em;
+  margin: auto;
+  /* background-color:black; */
+}
+
+section:nth-of-type(2)>article:nth-of-type(2) {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  overflow:scroll;
+  width:100%;
+  padding: 2em;
+  margin: auto;
+}
+
+section:nth-of-type(4)>article:nth-of-type(1) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: 100%;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(2) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: 100%;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(3) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: 100%;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(4) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: 100%;
+  background-position: 2%;
+}
+
+/*article 5 tot  niet zichtbaar in HTML */
+
+section:nth-of-type(4)>article:nth-of-type(5) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: 100%;
+  background-position: 2%;
+}
+
+/*article 6 zit de button in*/
+
+section:nth-of-type(4)>article:nth-of-type(6) {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em; 
+  align-items: center;
+}
+
+section:nth-of-type(6)>article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  padding: 1em;
+}
+
+/* Hyperlink styling - Attributen */
+
+li>a {
+  color: var(--textwhite-color);
+  font-size: 12px;
+  text-decoration: none;
+  padding: 0.2em;
+}
+
+/* Headings */
+
+h1 {
+  position: absolute;
+  width:11em;
+  margin:2em;
+  font-size: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 32px;
+  color: var(--heading-color);
+  text-shadow: 2px 2px 3px darkgray;
+  background: linear-gradient(90deg, rgba(153, 153, 153, 0.61) 0%, rgba(202, 202, 202, 0.486) 100%);
+}
+
+h2 {
+
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  /* background-color:purple; */
+}
+
+h3 {
+  
+  width:100%;
+  font-size: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  margin:auto;
+  color: var(--text-color);
+}
+
+h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  padding: 2em;
+  margin:auto;
+  font-size:17px;
+  text-align:center;
+  color: var(--text-color);
+  background: linear-gradient(90deg, rgba(212, 212, 212, 0.6797093837535014) 0%, rgba(255, 255, 255, 0.6797093837535014) 100%);
+}
+
+/* Button opmaak*/
+ 
+button{
+  display: block;
+  width: 15em;
+  padding: 1em 1em 1em 1em;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 23%;
+  border:none;
+  text-decoration: none;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  transition-delay: 1s;
+ 
+}
+button.toonalles{
+  display: block;
+  width: 15em;
+  padding: 1em 1em 1em 1em;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 23%;
+  border:none;
+  text-decoration: none;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  transform: rotate(-5deg);
+}
+
+
+/* Heading specifiek */
+
+section:nth-of-type(5)>h2 {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-top:2em;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+/* The paragraph elements - pseudo & specifiek */
+
+section:nth-of-type(2)>p:nth-of-type(1) {
+  text-transform: uppercase;
+  font-size: 21px;
+  padding-top:2em;
+  text-align: center;
+  color: var(--text-color);
+  margin: auto;
+  width: 80%;
+}
+
+section:nth-of-type(2)>article>p:nth-of-type(1) {
+  text-transform: uppercase;
+  width:100%;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 1em;
+}
+
+section:nth-of-type(5)>article>p {
+  display: block;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Specifiek - Images */
+
+header>img {
+  margin: auto;
+  padding:0;
+  width: 12%;
+}
+
+footer>section>img{
+  width:30%;
+  position:absolute;
+  top:0px;
+  left:10px;
+  right:10px;
+  margin:auto; 
+}
+
+/* Pseudo selector- Images */
+
+section:nth-of-type(1)>article>img:nth-of-type(1) {
+  width: auto;
+  height: 35em;
+  margin: -2em;
+}
+section:nth-of-type(2)>article>img:nth-of-type(1) {
+ /* background-color:orange; */
+ position:absolute;
+ left:2em;
+ margin-top:10em;
+}
+section:nth-of-type(2)>article>img:nth-of-type(2) {
+  width: 350px;
+  padding:1em;
+  margin: auto;
+}
+section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
+  padding:1em;
+  width: 270px;
+  margin-left:2em;
+}
+
+section:nth-of-type(2)>article>img:nth-of-type(3) {
+  /* background-color:orange; */
+  position:absolute;
+  right:2em;
+  margin-top:10em;
+ }
+section:nth-of-type(2)>img:nth-of-type(1) {
+  max-width:330px;
+  padding: 1em;
+  margin: auto;
+}
+section:nth-of-type(2)>img:nth-of-type(2) {
+  max-width: 340px;
+  padding:1em;
+  margin:auto;
+}
+
+section:nth-of-type(5)>article>img {
+  width: 70%;
+  padding: 1em;
+  margin: 2em;
+  transform: rotate(5deg);
+}
+
+/* Hover image - assortiment */
+section:nth-of-type(5)>article>img:hover {
+  width: 73%;
+  padding: 1em;
+  margin: 2em;
+  transform: rotate(5deg);
+}
+
+/* Icon bij button toon alles, niet zichtbaar, pas na click */
+section:nth-of-type(4)>article:nth-of-type(6)>img{
+  width:30px;
+  position:absolute;
+  margin:-2em 0 0 4em;
+  z-index:10;
+  opacity: 0;
+  transition:.5s;
+}
+
+/* Class img */
+section:nth-of-type(4)>article:nth-of-type(6)>img.tonen{
+  width:30px;
+  position:absolute;
+  margin:-2em 0 0 4em;
+  z-index:10;
+  opacity: 1;
+}
+
 
