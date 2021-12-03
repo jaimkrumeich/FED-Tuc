@@ -24,13 +24,13 @@ receptErbij1 = document.querySelector("section:nth-of-type(4) article:nth-of-typ
 
 
 
-// rightArrow.addEventListener("click", volgendeSlide);
+rightArrow.addEventListener("click", volgendeSlide);
 
 
-// function volgendeSlide(){
-// slideTapenade.style.display = "none";
-// slideTwee = document.querySelector("section:nth-of-type(2)>article:nth-of-type(2)").style.display="block";
-// }
+function volgendeSlide(){
+slideTapenade.style.display = "none";
+slideTwee = document.querySelector("section:nth-of-type(2)>article:nth-of-type(2)").style.display="block";
+}
 
 
 /* share items */

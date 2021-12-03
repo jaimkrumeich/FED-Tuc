@@ -35,9 +35,8 @@ main {
 header {
   display: flex;
   position: sticky;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
-  flex-flow: row wrap;
   bottom: 0;
   top: 0;
   z-index: 3;
@@ -73,17 +72,38 @@ footer>section:first-of-type {
 
 
 /* Navigatie in de header */
-nav ul {
+ul {
   display: flex;
-  width: 10em;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  flex-direction: column;
   padding: 1em;
-  margin: auto;
   color: var(--textwhite-color);
   background-color: var(--background-color);
   list-style: outside none none;
 }
+
+
+/* hamburger menu proberen */
+nav {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+li {
+  padding: .6em;
+  text-align: center;
+}
+
+ul>li>a {
+  font-size: .8em;
+}
+
+header>a>img {
+  width: 10em;
+}
+
 
 /* Block-level Elements - Sections en articles */
 /* Sections pseudo */
@@ -104,13 +124,14 @@ section:nth-of-type(2) {
   background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(241, 204, 116) 29%, rgba(254, 195, 52, 1) 100%);
 }
+
 section:nth-of-type(2)::after {
-  margin-top:2em;
-  background-color:white;
+  margin-top: 2em;
+  background-color: white;
   content: '';
   height: 3.3em;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-image: url("../images/base2.png");
 }
 
@@ -145,7 +166,7 @@ section:nth-of-type(1)>article:nth-of-type(1) {
   align-items: center;
 }
 
-section:nth-of-type(2)>article {
+section:nth-of-type(2)>article:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,11 +180,8 @@ section:nth-of-type(2)>article:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
   width: 100%;
   padding: 2em;
-  margin: auto;
-  background-color: gray;
 }
 
 section:nth-of-type(4)>article:nth-of-type(1) {
@@ -391,9 +409,6 @@ section:nth-of-type(5)>article>p {
 
 /* Specifiek - Images */
 
-header>a img {
-  width: 10em;
-}
 
 footer>section>img {
   width: 30%;
@@ -423,8 +438,10 @@ section:nth-of-type(2)>article>img:nth-of-type(2) {
 
 section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
   padding: 1em;
-  width: 20em;
-  margin-left: 2em;
+  width: 15em;
+  margin-left: 6%;
+  /* margin-left:35%;
+  margin-right:35%; */
 }
 
 /*Arrow right slider */
@@ -517,6 +534,12 @@ section:nth-of-type(5)>article>img:hover {
 }
 
 @media (min-width:48em) {
+
+  header>a>img {
+    width: 15em;
+    margin-left: 3em;
+  }
+
   footer>section>img {
     width: 22%;
   }
@@ -567,7 +590,13 @@ section:nth-of-type(5)>article>img:hover {
   section:nth-of-type(5) {
     grid-auto-flow: dense;
   }
- 
+
+  section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
+    width: 20em;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
 }
 
 
