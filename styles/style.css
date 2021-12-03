@@ -13,7 +13,7 @@
   --heading-color: white;
   --background-color: #102868;
   --text-color: #102868;
-  --textwhite-color:white;
+  --textwhite-color: white;
   --button-color: rgb(255, 255, 255);
   --button-gradient: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(146, 160, 195, 1) 0%, rgba(16, 40, 104, 1) 100%);
 
@@ -36,81 +36,88 @@ header {
   display: flex;
   position: sticky;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
   flex-flow: row wrap;
   bottom: 0;
   top: 0;
-  z-index: 1;
-  height:110px;
+  z-index: 3;
+  height: 8em;
   width: 100%;
   background-color: var(--accent-color);
 }
 
-footer{
-  background-color:white;
-  display:flex;
+footer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
-footer::before{
-  content:'';
-  display:block;
-  margin-top:.5em;
-  height:46px;
+footer::before {
+  display: block;
+  content: '';
+  margin-top: .5em;
+  height: 3.8em;
   background-image: url("../images/zig-zag.png");
-  background-repeat:repeat-x;
-  width:100%;
+  background-repeat: repeat-x;
+  width: 100%;
 }
 
-
-
-
-/* Navigatie in de header */
-
-nav ul  {
+footer>section:first-of-type {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 1em;
-  color: var(--textwhite-color);
-  background-color:var(--background-color);
-  list-style: outside none none;
-}
-
-
-/* Block-level Elements - Sections en articles */
-
-/*Specifiek section */
-footer>section{
-  height:300px;
-  width:100%;
+  justify-content: center;
+  align-items: flex-start;
+  height: 20em;
   background-color: var(--background-color);
 }
 
+
+/* Navigatie in de header */
+nav ul {
+  display: flex;
+  width: 10em;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 1em;
+  margin: auto;
+  color: var(--textwhite-color);
+  background-color: var(--background-color);
+  list-style: outside none none;
+}
+
+/* Block-level Elements - Sections en articles */
 /* Sections pseudo */
 section:nth-of-type(1) {
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content: flex-start;
   position: relative;
   overflow: scroll;
-  margin-top:-1em;
+  margin-top: -1em;
 }
 
 section:nth-of-type(2) {
   display: flex;
-  flex-direction:column;
-  overflow:hidden;
+  flex-direction: column;
+  overflow: hidden;
   justify-content: center;
-  padding-bottom:1em;
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 230, 170, 1) 29%, rgba(254, 195, 52, 1) 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(241, 204, 116) 29%, rgba(254, 195, 52, 1) 100%);
+}
+section:nth-of-type(2)::after {
+  margin-top:2em;
+  background-color:white;
+  content: '';
+  height: 3.3em;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url("../images/base2.png");
 }
 
 section:nth-of-type(3) {
   display: flex;
   flex-direction: row;
-  padding: 0.5em;
+  padding: .5em;
 }
 
 section:nth-of-type(4) {
@@ -118,20 +125,21 @@ section:nth-of-type(4) {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: .5em;
 }
 
+/* Grid - Section */
 section:nth-of-type(5) {
-  display: flex;
-  padding:1em 1em 3em 1em;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: 3em;
   justify-content: center;
-  flex-flow: row wrap;
-  align-items: center;
+  padding-bottom: 3em;
   background-color: var(--background-color);
 }
 
 /* Articles */
-section:nth-of-type(1)>article {
+section:nth-of-type(1)>article:nth-of-type(1) {
   display: flex;
   margin: auto;
   align-items: center;
@@ -139,9 +147,9 @@ section:nth-of-type(1)>article {
 
 section:nth-of-type(2)>article {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
   padding: 2em;
   margin: auto;
   /* background-color:black; */
@@ -149,12 +157,13 @@ section:nth-of-type(2)>article {
 
 section:nth-of-type(2)>article:nth-of-type(2) {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  overflow:scroll;
-  width:100%;
+  overflow: scroll;
+  width: 100%;
   padding: 2em;
   margin: auto;
+  background-color: gray;
 }
 
 section:nth-of-type(4)>article:nth-of-type(1) {
@@ -165,7 +174,7 @@ section:nth-of-type(4)>article:nth-of-type(1) {
   height: 25em;
   margin: .5em;
   background-image: url("../images/Roomkaas-chili-dip.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: 2%;
 }
 
@@ -176,8 +185,8 @@ section:nth-of-type(4)>article:nth-of-type(2) {
   width: 30em;
   height: 25em;
   margin: .5em;
-  background-image: url("../images/Roomkaas-chili-dip.png");
-  background-size: 100%;
+  background-image: url("../images/cheddar.jpg");
+  background-size: cover;
   background-position: 2%;
 }
 
@@ -188,8 +197,8 @@ section:nth-of-type(4)>article:nth-of-type(3) {
   width: 30em;
   height: 25em;
   margin: .5em;
-  background-image: url("../images/Roomkaas-chili-dip.png");
-  background-size: 100%;
+  background-image: url("../images/rodekool.jpg");
+  background-size: cover;
   background-position: 2%;
 }
 
@@ -200,12 +209,10 @@ section:nth-of-type(4)>article:nth-of-type(4) {
   width: 30em;
   height: 25em;
   margin: .5em;
-  background-image: url("../images/Roomkaas-chili-dip.png");
-  background-size: 100%;
+  background-image: url("../images/kruidendip.jpg");
+  background-size: cover;
   background-position: 2%;
 }
-
-/*article 5 tot  niet zichtbaar in HTML */
 
 section:nth-of-type(4)>article:nth-of-type(5) {
   display: flex;
@@ -214,74 +221,92 @@ section:nth-of-type(4)>article:nth-of-type(5) {
   width: 30em;
   height: 25em;
   margin: .5em;
-  background-image: url("../images/Roomkaas-chili-dip.png");
-  background-size: 100%;
+  background-image: url("../images/mayoaioli.jpg");
+  background-size: cover;
   background-position: 2%;
 }
 
-/*article 6 zit de button in*/
-
 section:nth-of-type(4)>article:nth-of-type(6) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/knoflook.jpg");
+  background-size: cover;
+  background-position: 2%;
+}
+
+
+/*article 7 niet pas na click */
+
+section:nth-of-type(4)>article:nth-of-type(7) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: cover;
+  background-position: 2%;
+}
+
+
+/*article 8 zit de button in*/
+
+section:nth-of-type(4)>article:nth-of-type(8) {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 2em;
-  margin-bottom: 2em; 
+  margin-bottom: 2em;
   align-items: center;
 }
 
-section:nth-of-type(6)>article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-flow: wrap;
-  padding: 1em;
-}
+
 
 /* Hyperlink styling - Attributen */
 
 li>a {
   color: var(--textwhite-color);
-  font-size: 12px;
+  font-size: 0.4em;
   text-decoration: none;
-  padding: 0.2em;
+  padding: 0.3em;
 }
+
 
 /* Headings */
 
 h1 {
   position: absolute;
-  width:11em;
-  margin:2em;
-  font-size: 27px;
+  padding: .1em;
+  font-size: 2em;
   text-transform: uppercase;
   text-align: center;
-  line-height: 32px;
+  line-height: 1em;
   color: var(--heading-color);
-  text-shadow: 2px 2px 3px darkgray;
-  background: linear-gradient(90deg, rgba(153, 153, 153, 0.61) 0%, rgba(202, 202, 202, 0.486) 100%);
+  text-shadow: 2px 2px 14px rgb(24, 22, 22);
 }
 
 h2 {
-
   display: block;
   width: 100%;
   margin: auto;
-  padding: 1em;
+  padding: .9em;
   text-align: center;
-  font-size: 25px;
+  font-size: 2em;
   text-transform: uppercase;
   color: var(--text-color);
-  /* background-color:purple; */
 }
 
 h3 {
-  
-  width:100%;
-  font-size: 23px;
+  width: 100%;
+  font-size: 1.5em;
   text-transform: uppercase;
   text-align: center;
-  margin:auto;
+  margin: auto;
   color: var(--text-color);
 }
 
@@ -289,59 +314,47 @@ h4 {
   position: absolute;
   bottom: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   padding: 2em;
-  margin:auto;
-  font-size:17px;
-  text-align:center;
+  margin: auto;
+  font-size: 1.3em;
+  text-align: center;
   color: var(--text-color);
   background: linear-gradient(90deg, rgba(212, 212, 212, 0.6797093837535014) 0%, rgba(255, 255, 255, 0.6797093837535014) 100%);
 }
 
 /* Button opmaak*/
- 
-button{
+
+button {
   display: block;
   width: 15em;
-  padding: 1em 1em 1em 1em;
-  font-size: 13px;
+  padding: 1em;
+  font-size: 1.1em;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   border-radius: 23%;
-  border:none;
+  border: none;
   text-decoration: none;
   color: var(--button-color);
   background: var(--button-gradient);
-  transition-delay: 1s;
- 
 }
-button.toonalles{
-  display: block;
-  width: 15em;
-  padding: 1em 1em 1em 1em;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 23%;
-  border:none;
-  text-decoration: none;
-  color: var(--button-color);
-  background: var(--button-gradient);
+
+
+button:hover {
   transform: rotate(-5deg);
 }
 
 
-/* Heading specifiek */
+/* Heading specifiek 
+Grid item H2*/
 
 section:nth-of-type(5)>h2 {
-  display: block;
-  width: 100%;
-  margin: auto;
-  padding-top:2em;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding-top: 2em;
   text-align: center;
-  font-size: 25px;
+  font-size: 2em;
   text-transform: uppercase;
   color: white;
 }
@@ -351,8 +364,8 @@ section:nth-of-type(5)>h2 {
 
 section:nth-of-type(2)>p:nth-of-type(1) {
   text-transform: uppercase;
-  font-size: 21px;
-  padding-top:2em;
+  font-size: 1.4em;
+  padding-top: 2em;
   text-align: center;
   color: var(--text-color);
   margin: auto;
@@ -360,113 +373,203 @@ section:nth-of-type(2)>p:nth-of-type(1) {
 }
 
 section:nth-of-type(2)>article>p:nth-of-type(1) {
-  text-transform: uppercase;
-  width:100%;
+  width: 100%;
   color: white;
   text-align: center;
-  font-size: 13px;
+  font-size: .9em;
   font-weight: bold;
   padding: 1em;
 }
 
 section:nth-of-type(5)>article>p {
   display: block;
+  font-size: .8em;
   color: white;
   text-align: center;
   width: 100%;
 }
 
-
 /* Specifiek - Images */
 
-header>img {
-  margin: auto;
-  padding:0;
-  width: 12%;
+header>a img {
+  width: 10em;
 }
 
-footer>section>img{
-  width:30%;
-  position:absolute;
-  top:0px;
-  left:10px;
-  right:10px;
-  margin:auto; 
+footer>section>img {
+  width: 30%;
+  margin: auto;
 }
 
 /* Pseudo selector- Images */
 
-section:nth-of-type(1)>article>img:nth-of-type(1) {
-  width: auto;
-  height: 35em;
+section:nth-of-type(1)>article>img {
+  width: 60em;
+  height: 45em;
   margin: -2em;
 }
+
+/*Arrow left slider */
 section:nth-of-type(2)>article>img:nth-of-type(1) {
- /* background-color:orange; */
- position:absolute;
- left:2em;
- margin-top:10em;
-}
-section:nth-of-type(2)>article>img:nth-of-type(2) {
-  width: 350px;
-  padding:1em;
-  margin: auto;
-}
-section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
-  padding:1em;
-  width: 270px;
-  margin-left:2em;
+  position: absolute;
+  left: 5%;
+  margin-top: 10em;
 }
 
-section:nth-of-type(2)>article>img:nth-of-type(3) {
-  /* background-color:orange; */
-  position:absolute;
-  right:2em;
-  margin-top:10em;
- }
-section:nth-of-type(2)>img:nth-of-type(1) {
-  max-width:330px;
+section:nth-of-type(2)>article>img:nth-of-type(2) {
+  width: 22em;
   padding: 1em;
   margin: auto;
 }
-section:nth-of-type(2)>img:nth-of-type(2) {
-  max-width: 340px;
-  padding:1em;
-  margin:auto;
+
+section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
+  padding: 1em;
+  width: 20em;
+  margin-left: 2em;
 }
+
+/*Arrow right slider */
+section:nth-of-type(2)>article>img:nth-of-type(3) {
+  position: absolute;
+  right: 5%;
+  margin-top: 10em;
+}
+
+section:nth-of-type(2)>img:nth-of-type(1) {
+  max-width: 20em;
+  padding: 1em;
+  margin: auto;
+}
+
+section:nth-of-type(2)>img:nth-of-type(2) {
+  max-width: 24em;
+  padding: 1em;
+  margin: auto;
+}
+
+/*Share icon + animation*/
+section:nth-of-type(4)>article>img:nth-of-type(1) {
+  position: absolute;
+  width: 3em;
+  left: 1em;
+  top: 1em;
+}
+
+@keyframes share-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+section:nth-of-type(4)>article>img:hover {
+  animation-name: share-animation;
+  animation-duration: 1s;
+}
+
+/*Facebook icon share */
+section:nth-of-type(4)>article>img:nth-of-type(2) {
+  position: absolute;
+  width: 3em;
+  left: 5em;
+  top: 1em;
+}
+
+/* assortiment images + animation - hover */
 
 section:nth-of-type(5)>article>img {
   width: 70%;
   padding: 1em;
   margin: 2em;
-  transform: rotate(5deg);
+  transform: rotate(2deg);
 }
 
-/* Hover image - assortiment */
+@keyframes assortiment-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
 section:nth-of-type(5)>article>img:hover {
-  width: 73%;
-  padding: 1em;
-  margin: 2em;
-  transform: rotate(5deg);
-}
-
-/* Icon bij button toon alles, niet zichtbaar, pas na click */
-section:nth-of-type(4)>article:nth-of-type(6)>img{
-  width:30px;
-  position:absolute;
-  margin:-2em 0 0 4em;
-  z-index:10;
-  opacity: 0;
-  transition:.5s;
-}
-
-/* Class img */
-section:nth-of-type(4)>article:nth-of-type(6)>img.tonen{
-  width:30px;
-  position:absolute;
-  margin:-2em 0 0 4em;
-  z-index:10;
-  opacity: 1;
+  animation-name: assortiment-animation;
+  animation-duration: 1s;
 }
 
 
+/*Media query */
+
+@media (min-width:30em) {
+  section:nth-of-type(4)>article:nth-of-type(1n) {
+    width: 26em;
+  }
+
+  h1 {
+    font-size: 2.7em;
+    width: 60%;
+    margin: 20%;
+  }
+}
+
+@media (min-width:48em) {
+  footer>section>img {
+    width: 22%;
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(1) {
+    left: 15%;
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(3) {
+    right: 15%;
+  }
+
+  section:nth-of-type(1)>article {
+    width: 100em;
+  }
+
+  section:nth-of-type(1)>article>img {
+    width: 100em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2.1em;
+  }
+
+  section:nth-of-type(2)>p:nth-of-type(1) {
+    font-size: 1.8em;
+    width: 40%;
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(2) {
+    width: 32em;
+
+  }
+
+  section:nth-of-type(2)>article>p:nth-of-type(1) {
+    font-size: 1.1em;
+
+  }
+
+  section:nth-of-type(5) {
+    padding: 0 12em 8em 12em;
+  }
+
+  section:nth-of-type(5) {
+    grid-auto-flow: dense;
+  }
+ 
+}
+
+
+
+/* Pagina 2 */
