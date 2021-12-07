@@ -76,26 +76,20 @@ hier de naam van de pagina
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
+Het opzetten van de HTML ging me goed af, ik had al redelijk snel css toegevoegd, waardoor ik later wat vast liep met het maken van de hamburger menu. Verder was het voormij even puzzelen met de headings, omdat op de officele website van Tuc het ook erg verwarrend is. Er is weinig onderscheid tussen de headings. 
+
 
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
 
 - Ik moet meer em gebruiken inplaats van pixels.
 - In mijn eerste section heb ik 3 keer gebruik gemaakt van een H1. Dit moet ik aanpassen
-- nog een punt
-- ...
+- Proberen om wat articles in mijn css samen te voegen. 
+- Voorderest kreeg ik te horen dat ik redelijk goed op weg was. 
 
 </details>
 
@@ -109,27 +103,31 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik wilde een aantal elementen laten werken door middel van JS. Javascript is niet echt een sterk punt van mij, dus ik vond het lastig. Ik was wel al op de goede weg, maar tijdens het voortgang gesprek kwamen we er gezamelijk ook niet uit. Ik wilde dat wanneer je op het share icoontje klikt er media iconen werden toegevoegd. Ik begon bij 1 icon, namelijk het Facebook icoontje. Dit is gelukt, maar na veel te geprobeerd te hebben krijg ik het nog steeds niet voor elkaar dat dat in iedere article gebeurt. 
+
+<img src="images/share-facebook.jpg" width="375px" alt="voorbeeld shareicon">
+<img src="images/js-code-icon.jpg" width="375px" alt="screenshot code js">
+
+
+Samen met Bo en Carolin hebben we al dingen aangepast in JS, zoals: querySelectorAll toevoegen ect.
+Als tip kreeg ik om wat meer classes te gebruiken, om zo het mijzelf ook makkelijker te maken in de JS.
+
+Verder heb ik van mijn eerste pagina ongeveer 85% af. De elementen die ik nu nog mis dat zijn meer de (micro)interacties en de footer. De footer stelde ik eigenlijk steeds uit, omdat ik lastigere elementen eerst wilde laten werken. 
+
+Hamburger menu heb ik na veel uur eindelijk voor elkaar gekregen, deels doormiddel van de codepen uitleg van Sanne, maar, omdat ik het net anders wilde heb ik de codes wel moeten ontcijferen tot ik het kon toe passen. 
+
+Ik ga kijken of ik het nog in me eentje voor elkaar kan krijgen in de aankomende weken. 
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
+Er waren geen medestudenten aanwezig tijdens het voortgang gesprek.
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
-
+- Nog verder gaan met JS
+- Beginnen aan de tweede pagina
+- Classes toevoegen
 </details>
 
 

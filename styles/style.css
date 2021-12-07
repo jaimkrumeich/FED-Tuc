@@ -33,17 +33,116 @@ main {
 }
 
 header {
-  display: flex;
+  display: grid;
   position: sticky;
-  justify-content: space-between;
-  flex-direction: row;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  justify-content: flex-end;
   bottom: 0;
   top: 0;
   z-index: 3;
-  height: 8em;
-  width: 100%;
   background-color: var(--accent-color);
 }
+
+header>a {
+  justify-self: center;
+}
+
+nav {
+  /* jouw code hier */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* background-color:red; */
+  order: 1;
+  margin: 1em;
+}
+
+nav button {
+  width: 5em;
+  height: 4.5em;
+  appearance: none;
+  border: none;
+  border-radius: .25em;
+  position: relative;
+  z-index: 100;
+  background-color: var(--accent-color);
+}
+
+nav button::before {
+  content: "\2630 ";
+  /* hamburger */
+  align-items: center;
+  font-size: 4em;
+  color: white;
+  width: 25em;
+  height: 4.5em;
+}
+
+nav.toonMenu button::before {
+  content: "\d7";
+  /* wit kruisje  
+  bron:https://stackoverflow.com/questions/18920542/draw-an-x-in-css */
+  color: #FFF;
+  font-size: 5em;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0 0;
+  background: var(--accent-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0%);
+  transition: .2s;
+  z-index: 10;
+}
+
+
+nav.toonMenu ul {
+  /* jouw code hier */
+  transform: scale(1);
+  margin-top: 7.5em;
+}
+
+
+nav>li>a>img {
+  width: 3em;
+
+}
+
+nav li a {
+  color: var(--text-color);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  border: none;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  border-radius: 23%;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  height: 1em;
+  transform: rotate(2deg);
+}
+
+
+header>a>img:nth-of-type(1) {
+  width: 9em;
+}
+
 
 footer {
   background-color: white;
@@ -68,40 +167,6 @@ footer>section:first-of-type {
   align-items: flex-start;
   height: 20em;
   background-color: var(--background-color);
-}
-
-
-/* Navigatie in de header */
-ul {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  color: var(--textwhite-color);
-  background-color: var(--background-color);
-  list-style: outside none none;
-}
-
-
-/* hamburger menu proberen */
-nav {
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-}
-
-li {
-  padding: .6em;
-  text-align: center;
-}
-
-ul>li>a {
-  font-size: .8em;
-}
-
-header>a>img {
-  width: 10em;
 }
 
 
@@ -176,12 +241,22 @@ section:nth-of-type(2)>article:nth-of-type(1) {
   /* background-color:black; */
 }
 
+section:nth-of-type(2)>article:nth-of-type(1).eersteSlideWeg {
+  display: none;
+  transition: 1s;
+}
+
 section:nth-of-type(2)>article:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 2em;
+  display: none;
+}
+
+section:nth-of-type(2)>article:nth-of-type(2).tweedeSlideZichtbaar {
+  display: block;
 }
 
 section:nth-of-type(4)>article:nth-of-type(1) {
@@ -206,7 +281,9 @@ section:nth-of-type(4)>article:nth-of-type(2) {
   background-image: url("../images/cheddar.jpg");
   background-size: cover;
   background-position: 2%;
+  display: none;
 }
+
 
 section:nth-of-type(4)>article:nth-of-type(3) {
   display: flex;
@@ -269,8 +346,12 @@ section:nth-of-type(4)>article:nth-of-type(7) {
   background-image: url("../images/Roomkaas-chili-dip.png");
   background-size: cover;
   background-position: 2%;
+  display: none;
 }
 
+section:nth-of-type(4)>article:nth-of-type(7).receptErbij {
+  display: block;
+}
 
 /*article 8 zit de button in*/
 
@@ -286,13 +367,6 @@ section:nth-of-type(4)>article:nth-of-type(8) {
 
 
 /* Hyperlink styling - Attributen */
-
-li>a {
-  color: var(--textwhite-color);
-  font-size: 0.4em;
-  text-decoration: none;
-  padding: 0.3em;
-}
 
 
 /* Headings */
@@ -343,7 +417,7 @@ h4 {
 
 /* Button opmaak*/
 
-button {
+button.toonAlles {
   display: block;
   width: 15em;
   padding: 1em;
@@ -359,7 +433,7 @@ button {
 }
 
 
-button:hover {
+button.toonAlles:hover {
   transform: rotate(-5deg);
 }
 
@@ -394,14 +468,14 @@ section:nth-of-type(2)>article>p:nth-of-type(1) {
   width: 100%;
   color: white;
   text-align: center;
-  font-size: .9em;
+  font-size: 1em;
   font-weight: bold;
   padding: 1em;
 }
 
 section:nth-of-type(5)>article>p {
   display: block;
-  font-size: .8em;
+  font-size: 1em;
   color: white;
   text-align: center;
   width: 100%;
@@ -487,11 +561,17 @@ section:nth-of-type(4)>article>img:hover {
 }
 
 /*Facebook icon share */
-section:nth-of-type(4)>article>img:nth-of-type(2) {
+section:nth-of-type(4)>article>img:nth-last-child(2n) {
   position: absolute;
   width: 3em;
   left: 5em;
   top: 1em;
+  opacity: 0;
+  transition: 1s;
+}
+
+section:nth-of-type(4)>article>img:nth-last-child(2n).facebookIcon {
+  opacity: 1;
 }
 
 /* assortiment images + animation - hover */
@@ -597,8 +677,192 @@ section:nth-of-type(5)>article>img:hover {
     margin-right: 25%;
   }
 
+  nav {
+    justify-self: center;
+    order: 0;
+
+  }
+
+  nav button {
+    display: none;
+  }
+
+  nav ul {
+    position: static;
+    transform: none;
+    display: flex;
+    padding: 1em;
+    background-color: blue;
+    font-weight: bold;
+    width: 40em;
+    justify-content: flex-start;
+    flex-direction: row;
+
+  }
+
+  ul>li>a {
+    border: none;
+    padding: 2em;
+    background-color: red;
+    font-size: .8em;
+
+  }
 }
 
 
 
 /* Pagina 2 */
+
+.recepten>section:nth-of-type(1) {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+section.menu {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  height: 13em;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+}
+
+main.recepten>section.ingredienten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+  grid-gap: 1em;
+  padding-top:1em;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  background-image: none;
+}
+
+.recepten>section.ingredienten>article {
+  /* background-color: blue; */
+  width:95%;
+}
+
+main.recepten>section.ingredienten>article>ul {
+padding:2em;
+  width: 100%;
+  /* background-color: red; */
+}
+
+
+main.recepten>section.ingredienten>article>ul>li {
+  /* background-color: white; */
+  padding: .6em;
+  color:var(--text-color);
+  font-weight:bold;
+}
+
+section.ingredienten::after {
+  background-image: none;
+  display: none;
+}
+
+.recepten>section:nth-of-type(3) {
+  display: grid;
+  background-color:var(--background-color);
+  align-items: center;
+  width:100%;
+  justify-content: center;
+  padding: 2em;
+}
+
+main.recepten>section:nth-of-type(3)>article {
+  display: flex;
+  width: 100%;
+  margin:auto;
+  align-items: center;
+  padding: .8em;
+  flex-direction: row;
+}
+
+main.recepten>section:nth-of-type(3)>article>p {
+  line-height: 1.5em;
+  padding-left: .8em;
+  color: var(--textwhite-color);
+
+}
+
+main.recepten>section.ingredienten>p {
+  font-size: 1.3em;
+  line-height: .9em;
+  position: relative;
+  width: 40%;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+}
+
+section.ingredienten>h1 {
+  font-size: 2em;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  /* background-color: yellow; */
+  margin: 0;
+  color: var(--text-color);
+  text-shadow: none;
+  text-align: center;
+}
+
+main.recepten>section.instructies>h2 {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  width: 100%;
+  font-size: 2em;
+  text-shadow: none;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  color: var(--textwhite-color);
+}
+
+section.menu>h3 {
+  font-size: 1.3em;
+  width: 100%;
+  padding: 1em 4em 1em 4em;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+section.ingredienten>img:nth-of-type(1) {
+  background-color: pink;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+section.ingredienten>img:nth-of-type(2) {
+  width: 5em;
+  padding: 0;
+}
+
+.recepten>section:nth-of-type(3)>article>img {
+  width: 2em;
+  height: 2em;
+}
+
+.recepten>section:nth-of-type(1)>img {
+  width: 5em;
+  padding: 1em;
+}
+
+section.menu>img:nth-of-type(1) {
+  position: absolute;
+  width: 1em;
+  top: 5em;
+  left: 2.2em;
+}
+
+section.menu>img:nth-of-type(2) {
+  position: absolute;
+  width: 1em;
+  right: 2.2em;
+  top: 5em;
+}

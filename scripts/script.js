@@ -3,50 +3,53 @@
 
 var toonallesButton = document.querySelector("section:nth-of-type(4) article:nth-of-type(8)>button");
 
-var receptErbij1 = document.querySelector("section:nth-of-type(4) article:nth-of-type(7)").style.display = "none";
-
-var leftArrow = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(1)");
-var rightArrow = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(3)");
-
-var slideTapenade = document.querySelector("section:nth-of-type(2)>article:nth-of-type(1)");
-var slideTwee = document.querySelector("section:nth-of-type(2)>article:nth-of-type(2)").style.display = "none";
-
-var shareButton = document.querySelector("section:nth-of-type(4)>article:nth-child(1)");
-var mediaIconen = document.querySelector("section:nth-of-type(4)>article>img:nth-of-type(2)").style.display= "none";
+var receptErbij1 = document.querySelector("section:nth-of-type(4) article:nth-of-type(7)")
 
 
 toonallesButton.addEventListener("click", receptErbij);
 
 function receptErbij(){
 
-receptErbij1 = document.querySelector("section:nth-of-type(4) article:nth-of-type(7)").style.display = "block";
+receptErbij1.classList.toggle("receptErbij");
 }
 
 
+
+
+
+var leftArrow = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(1)");
+var rightArrow = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(3)");
+
+var slideTapenade = document.querySelector("section:nth-of-type(2)>article:nth-of-type(1)");
+var slideTwee = document.querySelector("section:nth-of-type(2)>article:nth-of-type(2)");
 
 rightArrow.addEventListener("click", volgendeSlide);
 
-
 function volgendeSlide(){
-slideTapenade.style.display = "none";
-slideTwee = document.querySelector("section:nth-of-type(2)>article:nth-of-type(2)").style.display="block";
+
+slideTwee.classList.toggle ("tweedeSlideZichtbaar");
 }
+
+
+
 
 
 /* share items */
+var shareButton = document.querySelector("section:nth-of-type(4)>article>img:nth-of-type(1)");
+var mediaIconenOntzichtbaar = document.querySelector("section:nth-of-type(4)>article>img:nth-last-child(2n)");
 
-shareButton.addEventListener("click", mediaErbij);
+shareButton.addEventListener("click", mediaiconenErbij);
 
-function mediaErbij(){
-    mediaIconen = document.querySelector("section:nth-of-type(4)>article>img:nth-of-type(2)").style.display= "block";
+function mediaiconenErbij(){
+   mediaIconenOntzichtbaar.classList.toggle("facebookIcon");
 }
 
-// var deButton = document.querySelector("h2");
+var deButton = document.querySelector("nav button");
 
-// function doeFormNeerEnOp(){
-// 	let hetFormulier = document.querySelector("form");
-// 	hetFormulier.classList.toggle("toonForm");
-// }
+deButton.addEventListener("click", toggleMenu);
 
-// deButton.addEventListener("click", doeFormNeerEnOp);
+function toggleMenu(event) {
+  deNav = event.target.parentNode;
+  deNav.classList.toggle("toonMenu");
+}
     
