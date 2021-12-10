@@ -73,8 +73,8 @@ function toggleMenu(event) {
 
 rightArrow.addEventListener("click", slider);
 function slider(){
- imageTapenade.classList.add('zichtbaar');
-  // imageTapenade.src ="images/slide2.png";
+ imageTapenade.classList.toggle('zichtbaar');
+  imageTapenade.src ="images/slide2.png";
  
 }
 
