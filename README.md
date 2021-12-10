@@ -177,8 +177,8 @@ De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat
 Ik heb mijn Css en HTML door de validator gehaald om te kijken of deze fouten bevatten.
 In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warnings over dat sommige articles of section geen heading bevatten en een error, omdat ik in de naam van sommige images een spattie gebruikt heb. Dit moet ik nog aanpassen. 
 
-<img src="images/csschecker" width="375px" alt="validator css">
-<img src="images/tweedepaginachecker" width="375px" alt="roomkaas page validator ">
+<img src="images/csschecker.png" width="375px" alt="validator css">
+<img src="images/roomkaadpagecheck.pngr" width="375px" alt="roomkaas page validator ">
 <img src="images/indexchecker" width="375px" alt="index validator ">
 
 
