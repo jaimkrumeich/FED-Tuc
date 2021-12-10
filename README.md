@@ -140,30 +140,25 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
-Lijst met je bevindingen die in de test naar voren kwamen:
+Screenreader - Sommige a tags staan klein beetje naast de afbeelding, klikken kan wel doormiddel van de enter. 
+Bril vlekken > Redelijk 
+Bril zwarte vlek > Ik zag alleen de randen van de website.
+Bril andere vlekken > Kon nog goed door de website navigeren
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Screenreader
+Toen ik de screenreader geactiveerd had op mijn macbook kon ik kijken of de structuur van de website klopt en of mijn alt teksten relevant waren. Dit was gelukkig het geval. Ik had de focus state uitgewerkt, waardoor het goed te volgen was. Verder moet ik nog wel enkele margin opmaak weghalen, want deze verschuiven de boel.
 
 
 #### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
 #### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
 #### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 </details>
 
@@ -177,7 +172,8 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat meer Javascript aan het toevoegen. De website is naar mij genoeg goed responsive en nu ga ik verder met de plane, dus het opmakken van de buttons ect. Doordat ik de focus states heb opgemaakt, kun je makkelijker met de Tab door de pagina heen. Verder heb ik ook de hover state volledig uitgewerkt met content icons. 
+
 
 
 ### Agenda voor meeting
@@ -229,8 +225,8 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
+2. 
+3.
 
 </details>
