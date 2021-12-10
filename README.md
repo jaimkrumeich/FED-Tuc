@@ -177,9 +177,9 @@ De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat
 Ik heb mijn Css en HTML door de validator gehaald om te kijken of deze fouten bevatten.
 In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warnings over dat sommige articles of section geen heading bevatten en een error, omdat ik in de naam van sommige images een spattie gebruikt heb. Dit moet ik nog aanpassen. 
 
-<img src="images/csschecker.png" width="375px" alt="validator css">
-<img src="images/roomkaaspage.png" width="375px" alt="roomkaas page validator ">
-<img src="images/indexchecker.png" width="375px" alt="index validator ">
+<img src="images/csschecker" width="375px" alt="validator css">
+<img src="images/roomkaaspage" width="375px" alt="roomkaas page validator ">
+<img src="images/indexchecker" width="375px" alt="index validator ">
 
 
 ### Agenda voor meeting
@@ -232,7 +232,8 @@ hier screenshot(s) van je eindresultaat
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
-2. 
+2. Robert Spier :https://codepen.io/robertspier/pen/PoJzRYg?editors=1011
+
 3.
 
 </details>
