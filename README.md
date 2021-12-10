@@ -179,7 +179,7 @@ In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warning
 
 <img src="images/csschecker.jpg" width="375px" alt="validator css">
 <img src="images/roomkaaspage.jpg" width="375px" alt="roomkaas page validator ">
-<img src="images/indexchecker.jpg" width="375px" alt="index validator ">
+<img src="images/indexchecker" width="375px" alt="index validator ">
 
 
 ### Agenda voor meeting
