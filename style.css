@@ -658,7 +658,7 @@ section.menu {
   background-color: var(--background-color);
   display: flex;
   flex-direction: row;
-  height: 13em;
+  height: 11em;
   align-items: center;
   position: relative;
   flex-direction: row;
