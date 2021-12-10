@@ -233,7 +233,7 @@ hier screenshot(s) van je eindresultaat
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
-2. 
+2. https://extract.pics/
 3.
 
 </details>
