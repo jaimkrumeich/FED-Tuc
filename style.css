@@ -690,9 +690,10 @@ main.recepten>section.ingredienten>article>ul {
 main.recepten>section.ingredienten>article>ul>li {
   /* background-color: white; */
   padding: .5em;
+  width:100%;
   color: var(--text-color);
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 section.ingredienten::after {
