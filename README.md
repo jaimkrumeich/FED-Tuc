@@ -178,7 +178,7 @@ Ik heb mijn Css en HTML door de validator gehaald om te kijken of deze fouten be
 In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warnings over dat sommige articles of section geen heading bevatten en een error, omdat ik in de naam van sommige images een spattie gebruikt heb. Dit moet ik nog aanpassen. 
 
 <img src="images/csschecker" width="375px" alt="validator css">
-<img src="images/roomkaaspage" width="375px" alt="roomkaas page validator ">
+<img src="images/tweedepaginachecker" width="375px" alt="roomkaas page validator ">
 <img src="images/indexchecker" width="375px" alt="index validator ">
 
 
@@ -232,8 +232,7 @@ hier screenshot(s) van je eindresultaat
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
-2. Robert Spier :https://codepen.io/robertspier/pen/PoJzRYg?editors=1011
-
+2. 
 3.
 
 </details>
