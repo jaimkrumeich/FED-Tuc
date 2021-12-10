@@ -174,6 +174,12 @@ Toen ik de screenreader geactiveerd had op mijn macbook kon ik kijken of de stru
 ### Stand van zaken
 De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat meer Javascript aan het toevoegen. De website is naar mij genoeg goed responsive en nu ga ik verder met de plane, dus het opmakken van de buttons ect. Doordat ik de focus states heb opgemaakt, kun je makkelijker met de Tab door de pagina heen. Verder heb ik ook de hover state volledig uitgewerkt met content icons. 
 
+Ik heb mijn Css en HTML door de validator gehaald om te kijken of deze fouten bevatten.
+In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warnings over dat sommige articles of section geen heading bevatten en een error, omdat ik in de naam van sommige images een spattie gebruikt heb. Dit moet ik nog aanpassen. 
+
+<img src="images/csschecker.jpg" width="375px" alt="validator css">
+<img src="images/roomkaaspage.jpg" width="375px" alt="roomkaas page validator ">
+<img src="images/indexchecker.jpg" width="375px" alt="index validator ">
 
 
 ### Agenda voor meeting
