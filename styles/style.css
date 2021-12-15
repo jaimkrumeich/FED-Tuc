@@ -1,0 +1,1106 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+
+  /*colors*/
+  --accent-color: #fec334;
+  --heading-color: white;
+  --background-color: #102868;
+  --text-color: #102868;
+  --textwhite-color: white;
+  --button-color: rgb(255, 255, 255);
+  --button-gradient: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(146, 160, 195, 1) 0%, rgba(16, 40, 104, 1) 100%);
+
+  /*fonts*/
+  --font-family: "Gotham", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Generieke elementen */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Header en navigatie */
+
+header {
+  display: grid;
+  position: sticky;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  justify-content: flex-end;
+  bottom: 0;
+  top: 0;
+  z-index: 3;
+  background-color: var(--accent-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  order: 1;
+  margin: 1em;
+}
+
+nav button {
+  width: 5em;
+  height: 4.5em;
+  appearance: none;
+  border: none;
+  border-radius: .25em;
+  position: relative;
+  z-index: 100;
+  background-color: var(--accent-color);
+}
+
+/* Hamburger menu */
+
+nav button::before {
+  content: "\2630 ";
+  /* hamburger teken */
+  align-items: center;
+  font-size: 4em;
+  color: white;
+  width: 25em;
+  height: 4.5em;
+}
+
+nav.toonMenu button::before {
+  content: "\d7";
+  /* wit kruisje  
+  bron:https://stackoverflow.com/questions/18920542/draw-an-x-in-css */
+  color: #FFF;
+  font-size: 5em;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0 0;
+  background: var(--accent-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0);
+  z-index: 10;
+  list-style-type: none;
+}
+
+nav.toonMenu li{
+  list-style-type: none;
+}
+
+nav.toonMenu ul {
+  transform: scale(1);
+  margin-top: 7.5em;
+  list-style: none;
+}
+
+nav li a {
+  color: var(--text-color);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav li a:hover {
+  border-radius: 23%;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  height: 1em;
+  transform: rotate(2deg);
+}
+
+nav li a:hover::before {
+  content: url("../images/decor.svg");
+  width: 1em;
+  position: absolute;
+  margin: -3em 0 auto 5em;
+}
+
+
+nav li a:focus-visible {
+  border-radius: 23%;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  height: 1em;
+  transform: rotate(2deg);
+  outline: none;
+}
+
+/* logo Tuc imgage */
+
+header>a img:nth-of-type(1) {
+  width: 9em;
+}
+
+header>a>img:nth-of-type(1):hover {
+  transform: rotate(1deg);
+}
+
+header>a:focus-visible {
+  transform: rotate(1deg);
+  outline: none;
+}
+
+
+footer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer::before {
+  display: block;
+  content: '';
+  margin-top: .5em;
+  height: 3.8em;
+  background-image: url("../images/zig-zag.png");
+  background-repeat: repeat-x;
+  width: 100%;
+}
+
+footer>section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--background-color);
+
+}
+
+footer>section>ul {
+  width: 100%;
+  margin: 2em auto 4em -.8em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+footer>section>ul>li {
+  text-align: center;
+  height: 1.5em;
+  list-style-type: none;
+}
+
+footer>section>ul>li>a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .6em;
+  padding: 1em .8em 1em .8em;
+  color: white;
+}
+
+footer>section>img {
+  width: 45%;
+  margin: 4em auto .8em auto;
+}
+
+/* Block-level Elements - Sections en articles */
+/* Sections pseudo */
+section:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  overflow-y: scroll;
+  margin-top:-2em;
+}
+
+section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(241, 204, 116) 29%, rgba(254, 195, 52, 1) 100%);
+}
+
+section:nth-of-type(2)::after {
+  margin-top: 2em;
+  background-color: white;
+  content: '';
+  height: 3.3em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/base2.png");
+}
+
+section:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  padding: .5em;
+}
+
+section:nth-of-type(4) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: .5em;
+}
+
+/* Grid - Section */
+section:nth-of-type(5) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: 3em;
+  justify-content: center;
+  padding-bottom: 3em;
+  background-color: var(--background-color);
+}
+
+/* Articles */
+section:nth-of-type(1)>article {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+section:nth-of-type(2)>article:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  margin: auto;
+  /* background-color:black; */
+}
+
+
+
+section:nth-of-type(4)>article:nth-of-type(1) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: cover;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(2) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/cheddar.jpg");
+  background-size: cover;
+  background-position: 2%;
+  display: none;
+}
+
+
+section:nth-of-type(4)>article:nth-of-type(3) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/rodekool.jpg");
+  background-size: cover;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(4) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/kruidendip.jpg");
+  background-size: cover;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(5) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/mayoaioli.jpg");
+  background-size: cover;
+  background-position: 2%;
+}
+
+section:nth-of-type(4)>article:nth-of-type(6) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/knoflook.jpg");
+  background-size: cover;
+  background-position: 2%;
+}
+
+
+/*article 7 niet pas na click */
+
+section:nth-of-type(4)>article:nth-of-type(7) {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  height: 25em;
+  margin: .5em;
+  background-image: url("../images/Roomkaas-chili-dip.png");
+  background-size: cover;
+  background-position: 2%;
+  display: none;
+}
+
+section:nth-of-type(4)>article:nth-of-type(7).receptErbij {
+  display: block;
+}
+
+/*article 8 zit de button in*/
+
+section:nth-of-type(4)>article:nth-of-type(8) {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+/* Hyperlink styling - Attributen */
+
+
+/* Headings */
+
+h1 {
+  position: absolute;
+  padding: .1em;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  color: var(--heading-color);
+  text-shadow: 2px 2px 14px rgb(24, 22, 22);
+}
+
+h2 {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: .9em;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+h3 {
+  width: 100%;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  color: var(--text-color);
+}
+
+h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.3em;
+  margin: auto;
+  font-size: 1.3em;
+  text-align: center;
+  color: var(--text-color);
+  background: linear-gradient(90deg, rgba(212, 212, 212, 0.6797093837535014) 0%, rgba(255, 255, 255, 0.6797093837535014) 100%);
+}
+
+/* span om uitlijning gelijk te krijgen */
+span {
+  padding: 1em;
+}
+
+section:nth-of-type(4)>article>a>h4:hover {
+  background: var(--background-color);
+  color: var(--textwhite-color);
+}
+
+section:nth-of-type(4)>article>a:focus {
+  font-size: 1.2em;
+}
+
+
+/* Button opmaak*/
+
+button.toonAlles {
+  display: block;
+  width: 15em;
+  padding: 1em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 23%;
+  border: none;
+  text-decoration: none;
+  color: var(--button-color);
+  background: var(--button-gradient);
+  transition: .5s;
+}
+
+
+button.toonAlles:hover {
+  transform: rotate(-5deg);
+}
+
+
+button.toonAlles:focus-visible {
+  transform: rotate(-5deg);
+  outline: none;
+}
+
+button.toonAlles:hover::before {
+  content: url("../images/decor.svg");
+  width: 2em;
+  position: absolute;
+  margin: -3em 0 auto 5em;
+}
+
+
+/* Heading specifiek 
+Grid item H2*/
+
+section:nth-of-type(5)>h2 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding-top: 2em;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+/* The paragraph elements - pseudo & specifiek */
+
+section:nth-of-type(2)>p:nth-of-type(1) {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  padding-top: 2em;
+  text-align: center;
+  color: var(--text-color);
+  margin: auto;
+  width: 80%;
+}
+
+section:nth-of-type(2)>article>p:nth-of-type(1) {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+section:nth-of-type(5)>article>p {
+  display: block;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* Specifiek - Images */
+
+
+
+
+/* Pseudo selector- Images */
+
+section:nth-of-type(1)>article>img {
+  width: 60em;
+  height: 40em;
+  object-fit: cover;
+}
+
+/*Arrow left slider */
+section:nth-of-type(2)>article>img:nth-of-type(1) {
+  position: absolute;
+  left: 5%;
+  margin-top: 10em;
+}
+
+section:nth-of-type(2)>article>img:nth-of-type(2) {
+  width: 22em;
+  padding: 1em;
+  margin: auto;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+
+  100% {
+    transform: rotate(-360deg);
+
+  }
+}
+
+
+section:nth-of-type(2)>article>img:nth-of-type(2):hover{
+  animation-name: rotate-animation;
+  animation-duration: 2s;
+}
+
+/*Arrow right slider */
+section:nth-of-type(2)>article>img:nth-of-type(4) {
+  position: absolute;
+  right: 5%;
+  margin-top: 10em;
+}
+
+section:nth-of-type(2)>img:nth-of-type(1) {
+  width: 20em;
+  padding: 1em;
+  margin: auto;
+}
+
+section:nth-of-type(2)>img:nth-of-type(2) {
+  width: 24em;
+  padding: 1em;
+  margin: auto;
+}
+
+section:nth-of-type(2)>article>img:nth-of-type(3) {
+  display: none;
+}
+
+section:nth-of-type(2)>article>img:nth-of-type(3).zichtbaar {
+  position: absolute;
+  display: block;
+  width: 10em;
+}
+
+/*Share icon + animation*/
+section:nth-of-type(4)>article>img:nth-of-type(1) {
+  position: absolute;
+  width: 3em;
+  left: 1em;
+  top: 1em;
+}
+
+
+@keyframes share-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section:nth-of-type(4)>article>img:hover {
+  animation-name: share-animation;
+  animation-duration: 2s;
+}
+
+/*Facebook icon share */
+section:nth-of-type(4)>article>img:nth-last-child(2n) {
+  position: absolute;
+  width: 3em;
+  left: 5em;
+  top: 1em;
+  opacity: 0;
+  transition: 1s;
+}
+
+section:nth-of-type(4)>article>img:nth-last-child(2n).facebookIcon {
+  opacity: 1;
+}
+
+/* assortiment images + animation - hover */
+
+section:nth-of-type(5)>article>img {
+  width: 70%;
+  padding: 1em;
+  margin: 2em;
+  transform: rotate(2deg);
+}
+
+@keyframes assortiment-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+section:nth-of-type(5)>article>img:hover {
+  animation-name: assortiment-animation;
+  animation-duration: 1s;
+}
+
+
+
+
+
+/* Pagina 2 */
+
+.recepten>section:nth-of-type(1) {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section.menu {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  height: 11em;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+
+main.recepten>section.ingredienten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+  grid-gap: 1em;
+  padding-top: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-image: none;
+}
+
+.recepten>section.ingredienten>article {
+  width: 100%;
+  display: flex;
+}
+
+main.recepten>section.ingredienten>article>ul {
+  padding: 1em .5em 1em 1em;
+  width: 50%;
+}
+
+
+main.recepten>section.ingredienten>article>ul>li {
+  /* background-color: white; */
+  padding: .5em;
+  width: 100%;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+section.ingredienten::after {
+  background-image: none;
+  display: none;
+}
+
+.recepten>section:nth-of-type(3) {
+  display: grid;
+  background-color: var(--background-color);
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 2em;
+}
+
+
+
+main.recepten>section:nth-of-type(3)>article {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  padding: .8em;
+  flex-direction: row;
+}
+
+main.recepten>section:nth-of-type(3)>article>p {
+  line-height: 1.5em;
+  padding-left: .8em;
+  color: var(--textwhite-color);
+
+}
+
+section.menu>p {
+  display: none;
+}
+
+main.recepten>section.ingredienten>p {
+  font-size: 1.3em;
+  line-height: 1em;
+  position: relative;
+  width: 40%;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+}
+
+section.ingredienten>h1 {
+  font-size: 2em;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  /* background-color: yellow; */
+  margin: 0;
+  color: var(--text-color);
+  text-shadow: none;
+  text-align: center;
+}
+
+main.recepten>section.instructies>h2 {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  width: 100%;
+  font-size: 2em;
+  text-shadow: none;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  color: var(--textwhite-color);
+}
+
+main.recepten>section>h2 {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  width: 100%;
+  font-size: 2em;
+  text-shadow: none;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  color: var(--text-color);
+}
+
+section.menu>h3 {
+  font-size: 1.3em;
+  width: 100%;
+  padding: 1em 4em 1em 4em;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+/* image met opgemaakt frame */
+section.ingredienten>img:nth-of-type(1) {
+  width: 32em;
+  padding: 0;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+@keyframes image-animation {
+
+
+  50% {
+    transform:rotate(-5deg);
+  }
+
+
+}
+section.ingredienten>img:nth-of-type(1):hover {
+  animation-name: image-animation;
+  animation-duration: 1s;
+}
+
+section.ingredienten>img:nth-of-type(2) {
+  width: 5em;
+  padding: 0;
+}
+
+.recepten>section:nth-of-type(3)>article>img {
+  width: 4em;
+  height: 3.3em;
+}
+
+/* article met de social iconen - onder de header */
+.recepten>section:nth-of-type(1)>article:nth-of-type(1) {
+  display: flex;
+  padding:2.5em 1em 1em 1em;
+  width: 100%;
+  background-color: var(--background-color);
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+/* Social media iconen opmaak - onder de header */
+.recepten>section:nth-of-type(1)>article:nth-of-type(1)>a>img {
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+}
+
+/* Hover Social media iconen opmaak - onder de header */
+.recepten>section:nth-of-type(1)>article:nth-of-type(1)>a:hover::before {
+  content: url("../images/decor.svg");
+  position: absolute;
+  opacity: 1;
+  margin: .5em 1.5em;
+  width: 1.1em;
+}
+
+/* arrow left */
+section.menu>a:nth-of-type(1)>img {
+  position: absolute;
+  width: 1em;
+  top: 5em;
+  left: 2.2em;
+}
+
+/* arrow right */
+section.menu>a:nth-of-type(2)>img {
+  position: absolute;
+  width: 1em;
+  right: 2.2em;
+  top: 5em;
+}
+
+
+/*Media query */
+
+@media (min-width:30em) {
+  section:nth-of-type(4)>article:nth-of-type(1n) {
+    width: 26em;
+  }
+
+  h1 {
+    font-size: 2.7em;
+    width: 60%;
+    margin: 20%;
+  }
+}
+
+
+@media (min-width:48em) {
+
+  header>a>img {
+    width: 25em;
+    margin-left: 25em;
+  }
+
+  footer>section>ul>li>a {
+    font-size: .7em;
+  }
+  
+  footer>section>img {
+    width: 15%;
+  }
+
+  footer>section>ul {
+
+    margin: 1em auto 6em -.8em;
+
+  
+  }
+
+  footer>section:first-of-type {
+    height: 20em;
+  }
+
+
+  /* arrows */
+  section:nth-of-type(2)>article>img:nth-of-type(1) {
+    left: 15%;
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(4) {
+    right: 15%;
+  }
+
+  /* arrows hover en focus */
+  section:nth-of-type(2)>article>img:nth-of-type(1):hover {
+    transform: scale(1.3);
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(4):hover {
+    transform: scale(1.3);
+  }
+
+
+  section:nth-of-type(1)>article {
+    width: 100em;
+  }
+
+  section:nth-of-type(1)>article>img {
+    width: 100em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2.1em;
+  }
+
+  section:nth-of-type(2)>p:nth-of-type(1) {
+    font-size: 1.8em;
+    width: 40%;
+  }
+
+  section:nth-of-type(2)>article>img:nth-of-type(2) {
+    width: 32em;
+
+  }
+
+  section:nth-of-type(2)>article>p:nth-of-type(1) {
+    font-size: 1.1em;
+
+  }
+
+  section:nth-of-type(5) {
+    padding: 0 12em 8em 12em;
+  }
+
+  section:nth-of-type(5) {
+    grid-auto-flow: dense;
+  }
+
+  section:nth-of-type(2)>article:nth-of-type(2)>img:nth-of-type(2) {
+    width: 20em;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  nav {
+    justify-self: center;
+    order: 0;
+    transition: none;
+
+  }
+
+  nav button {
+    display: none;
+
+  }
+
+  nav ul {
+    position: static;
+    transform: none;
+    display: flex;
+    font-size: 1.5em;
+    list-style: none;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: row;
+
+  }
+
+  ul>li>a {
+    border: none;
+    font-size: .8em;
+  }
+
+  /* Pagina 2 */
+
+  section.menu>a:nth-of-type(1)>img {
+    position: absolute;
+    width: 1em;
+    top: 5em;
+    left: 5.5em;
+  }
+
+  section.menu>a:nth-of-type(2)>img {
+    position: absolute;
+    width: 1em;
+    right: 5.5em;
+    top: 5em;
+  }
+
+  /* image met opgemaakt frame */
+  section.ingredienten>img:nth-of-type(1) {
+    width: 40em;
+
+  }
+
+  section.menu>h3 {
+    width: 65%;
+    font-size: 2em;
+  }
+
+  main.recepten>section:nth-of-type(3)>article {
+    width: 50%;
+  }
+
+  main.recepten>section.ingredienten>article>ul {
+    padding: 1em .5em 1em 1em;
+    width: 80%;
+  }
+
+
+}
+
+
+@media (min-width:68em) {
+  section.menu>p:nth-of-type(1) {
+    display: block;
+    position: absolute;
+    width: 15em;
+    line-height: 1.3em;
+    left: 7em;
+    top: 5em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+
+  section.menu>p:nth-of-type(2) {
+    display: block;
+    text-align: right;
+    position: absolute;
+    width: 13em;
+    line-height: 1.3em;
+    right: 7em;
+    top: 5em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+}
