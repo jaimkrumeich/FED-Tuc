@@ -103,14 +103,10 @@ nav ul {
   list-style-type: none;
 }
 
-nav.toonMenu li{
-  list-style-type: none;
-}
-
 nav.toonMenu ul {
   transform: scale(1);
   margin-top: 7.5em;
-  list-style-type: none;
+  list-style:none;
 }
 
 nav li a {
@@ -123,7 +119,6 @@ nav li a {
   align-items: center;
   border: none;
   text-decoration: none;
-  list-style-type: none;
 }
 
 nav li a:hover {
