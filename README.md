@@ -213,11 +213,32 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Na mijn laatste voortgang gesprek heb ik aan het volgende gewerkt:
+- Elementen toevoegen voor de fun, zoals een zoekbalk en de toon alles button gemaakt dat de text weer aangepast wordt naar toon minder
+- image aangepast met behulp van object-fit:cover
+- Footer afgemaakt 
+- Vergeten bronnen toegevoegd
+- list-style:none 
+- Nog wat keyframes toegevoegd om het nog speelser te maken
+- Aanpassingen in mediarequerys
+
+- Proberen verder te komen met de slider
+Helaas is het niet meer binnen de tijd gelukt om de slider goed te krijgen. Ik heb hulp gevraagd, en er werd mij verteld dat ik moet kijken om te werken met if and else. Toch is het niet gelukt en had ik niet meer tijd om verdere hulp te krijgen. Veel geprobeerd door middel met research van het internet, maar doordat ik er te lang naar bleef kijken zag ik het niet meer. Volgende keer beter!
+
+Ook heb ik mijn codes weer door de validator gehaald en dit waren de resultaten:
+
+
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+Resultaten validator html:
+<img src="images/screenshothtml1" width="375px" alt="index validator ">
+<img src="images/screenshothtml2" width="375px" alt="index validator ">
+Resultaten validator css:
+<img src="images/screenshotcss" width="375px" alt="index validator ">
+
+Vast gelopen bij dit:
+
 
 </details>
 
@@ -232,8 +253,8 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
-2. https://extract.pics/
-3. Robert Spier > https://codepen.io/robertspier/pen/PoJzRYg?editors=1011
+1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
+2. 
+3.
 
 </details>
