@@ -68,8 +68,6 @@ hier de naam van de pagina
 
 
 
-
-
 ## Voortgang 1 (week 2)
 
 <details open>
@@ -77,11 +75,6 @@ hier de naam van de pagina
 
 ### Stand van zaken
 Het opzetten van de HTML ging me goed af, ik had al redelijk snel css toegevoegd, waardoor ik later wat vast liep met het maken van de hamburger menu. Verder was het voormij even puzzelen met de headings, omdat op de officele website van Tuc het ook erg verwarrend is. Er is weinig onderscheid tussen de headings. 
-
-
-
-
-### Agenda voor meeting
 
 
 ### Verslag van meeting
@@ -122,8 +115,8 @@ Ik ga kijken of ik het nog in me eentje voor elkaar kan krijgen in de aankomende
 ### Agenda voor meeting
 Er waren geen medestudenten aanwezig tijdens het voortgang gesprek.
 
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
+### Verslag 
+
 
 - Nog verder gaan met JS
 - Beginnen aan de tweede pagina
@@ -149,15 +142,21 @@ Bril andere vlekken > Kon nog goed door de website navigeren
 Toen ik de screenreader geactiveerd had op mijn macbook kon ik kijken of de structuur van de website klopt en of mijn alt teksten relevant waren. Dit was gelukkig het geval. Ik had de focus state uitgewerkt, waardoor het goed te volgen was. Verder moet ik nog wel enkele margin opmaak weghalen, want deze verschuiven de boel.
 
 
-#### Titel tweede bevinding. 
+#### Bril wazig
+Ik kon door deze bril prima heen kijken en kon goed door mijn website navigeren. 
 
 
+#### Bril vlekken 
+Met deze bril werd het iets lastiger om de website goed te kunnen zien, wel kon ik goed door mijn website heen navigeren. Oplossing is een screenreader die navigeert door je website heen. 
 
-#### Titel volgende bevinding. 
+
+#### Bril met zwarte rondjes
+Met deze bril kon ik weinig zien, ik zag alleen de buitenste randen. Wel kon ik nog navigeren. Ik denk dat ik 85% van het scherm niet meer zag, ik zou hierdoor dus gebruik moeten maken van een screenreader.
+
+#### Concentratie probleem
+Dit was wat lastiger, ik hield mij vooral bezig met de ballon en om deze niet te laten vallen. Hierdoor kon ik niet goed door mijn website navigeren. In dit geval zou ik dus ook het beste een screenreader kunnen gebruiken. 
 
 
-
-#### Titel nog een bevinding. 
 
 Ook heb ik hulp gekregen van Robert met een punt waar ik vast liep, namelijk de share - media iconen.
 </details>
@@ -184,23 +183,6 @@ In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warning
 <img src="images/indexchecker.png" width="375px" alt="index validator ">
 
 
-### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
 
 </details>
 
@@ -255,8 +237,13 @@ Vast gelopen bij dit:
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron: https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
-2. 
-3.
+1. https://stackoverflow.com/questions/18920542/draw-an-x-in-css 
+2. https://codepen.io/jaimkrumeich/pen/ExwWPpL?editors=1100
+3. https://cssgradient.io 
+4. https://stackoverflow.com/questions/18920542/draw-an-x-in-css
+5. Robert Spier: https://codepen.io/robertspier/pen/PoJzRYg?editors=1011
+6. https://codepen.io/shooft/pen/abwLwRO
+7. https://extract.pics/
+8. Humty oefening (voor de hamburger menu)
 
 </details>
