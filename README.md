@@ -208,6 +208,8 @@ Na mijn laatste voortgang gesprek heb ik aan het volgende gewerkt:
 - Proberen verder te komen met de slider
 Helaas is het niet meer binnen de tijd gelukt om de slider goed te krijgen. Ik heb hulp gevraagd, en er werd mij verteld dat ik moet kijken om te werken met if and else. Toch is het niet gelukt en had ik niet meer tijd om verdere hulp te krijgen (stress door HCI tentamen tussen door ;( )). Veel geprobeerd door research van het internet, maar doordat ik er te lang naar bleef kijken zag ik het niet meer. Volgende keer beter!
 
+Tijdens dit vak heb ik weer ontzettend veel nieuwe dingen geleerd, en dan vooral het animatie en grid gedeelte, daar heb ik veel uit kunnen halen, en door de duidelijke lessen het eindelijk goed kunnen begrijpen!
+
 Ook heb ik mijn codes weer door de validator gehaald en dit waren de resultaten:
 
 
