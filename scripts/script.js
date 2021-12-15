@@ -16,18 +16,24 @@ var leftArrow = document.querySelectorAll("section:nth-of-type(2)>article>img:nt
 var rightArrow = document.querySelectorAll("section:nth-of-type(2)>article>img:nth-of-type(4)");
 
 /* images slider */
-var imageTapenade = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(2)");
-var imagetweeOnzichtbaar = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(3)");
-var imagetweeZichtbaar = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(3).zichtbaar");
 
 
+
+var buttonText = document.querySelector("section:nth-of-type(4) article:nth-of-type(8)>button");
 
 /* article erbij doormiddel van click */
 toonallesButton.addEventListener("click", receptErbij);
 
 function receptErbij(){
+
 receptErbij1.classList.toggle("receptErbij");
+if (buttonText.innerHTML == "Toon minder") {
+  buttonText.innerHTML = "Toon Alles";
+} else {
+  buttonText.innerHTML = "Toon minder";
 }
+}
+
 
 
 /* share icon + Facebook icon - Bron> Robert Spier*/
@@ -51,10 +57,10 @@ function toggleMenu(event) {
 
 
 
+var imageTapenade = document.querySelector("section:nth-of-type(2)>article>img:nth-of-type(2)");
 
-// /* share icon + Facebook icon - Bron> Robert Spier*/
+
 rightArrow.forEach(function(rightArrow) {
-// 	/* voeg voor iedere button een event listener toe */
  rightArrow.addEventListener('click', function(e) {
 e.target.parentNode.querySelector('img:nth-of-type(3)').classList.toggle('zichtbaar');
 
@@ -63,6 +69,7 @@ e.target.parentNode.querySelector('img:nth-of-type(3)').classList.toggle('zichtb
    })
 
   })
+
 
 
     
