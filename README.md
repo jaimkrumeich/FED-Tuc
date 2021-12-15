@@ -159,7 +159,7 @@ Toen ik de screenreader geactiveerd had op mijn macbook kon ik kijken of de stru
 
 #### Titel nog een bevinding. 
 
-
+Ook heb ik hulp gekregen van Robert met een punt waar ik vast liep, namelijk de share - media iconen.
 </details>
 
 
@@ -172,7 +172,8 @@ Toen ik de screenreader geactiveerd had op mijn macbook kon ik kijken of de stru
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat meer Javascript aan het toevoegen. De website is naar mij genoeg goed responsive en nu ga ik verder met de plane, dus het opmakken van de buttons ect. Doordat ik de focus states heb opgemaakt, kun je makkelijker met de Tab door de pagina heen. Verder heb ik ook de hover state volledig uitgewerkt met content icons. 
+De eerste en tweedepagina zijn zo goed als af, nu werken aan de laatste details.
+De laatste puntjes op de i zetten gaat wat meer met moeite. Ik ben momenteel wat meer Javascript aan het toevoegen. De website is naar mij genoeg goed responsive en nu ga ik verder met de plane, dus het opmaken van de buttons ect. Doordat ik de focus states heb opgemaakt, kun je makkelijker met de Tab door de pagina heen. Verder heb ik ook de hover state volledig uitgewerkt met icons. 
 
 Ik heb mijn Css en HTML door de validator gehaald om te kijken of deze fouten bevatten.
 In mijn CSS had ik geen warnings of errors. In mijn Html pagina's enkele warnings over dat sommige articles of section geen heading bevatten en een error, omdat ik in de naam van sommige images een spattie gebruikt heb. Dit moet ik nog aanpassen. 
@@ -223,7 +224,7 @@ Na mijn laatste voortgang gesprek heb ik aan het volgende gewerkt:
 - Aanpassingen in mediarequerys
 
 - Proberen verder te komen met de slider
-Helaas is het niet meer binnen de tijd gelukt om de slider goed te krijgen. Ik heb hulp gevraagd, en er werd mij verteld dat ik moet kijken om te werken met if and else. Toch is het niet gelukt en had ik niet meer tijd om verdere hulp te krijgen. Veel geprobeerd door middel met research van het internet, maar doordat ik er te lang naar bleef kijken zag ik het niet meer. Volgende keer beter!
+Helaas is het niet meer binnen de tijd gelukt om de slider goed te krijgen. Ik heb hulp gevraagd, en er werd mij verteld dat ik moet kijken om te werken met if and else. Toch is het niet gelukt en had ik niet meer tijd om verdere hulp te krijgen (stress door HCI tentamen tussen door ;( )). Veel geprobeerd door research van het internet, maar doordat ik er te lang naar bleef kijken zag ik het niet meer. Volgende keer beter!
 
 Ook heb ik mijn codes weer door de validator gehaald en dit waren de resultaten:
 
@@ -232,13 +233,14 @@ Ook heb ik mijn codes weer door de validator gehaald en dit waren de resultaten:
 ### Screenshot(s)
 
 Resultaten validator html:
-<img src="images/screenshothtml1" width="375px" alt="index validator ">
-<img src="images/screenshothtml2" width="375px" alt="index validator ">
+<img src="images/screenshothtml1.png" width="375px" alt="index validator ">
+<img src="images/screenshothtml2.png" width="375px" alt="index validator ">
 Resultaten validator css:
-<img src="images/screenshotcss" width="375px" alt="index validator ">
+<img src="images/screenshotcss.png" width="375px" alt="css validator ">
 
 Vast gelopen bij dit:
-
+<img src="images/jscode.png" width="375px" alt="js code">
+<img src="images/screenshottucpage.png" width="375px" alt="js code">
 
 </details>
 
