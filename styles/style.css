@@ -187,6 +187,8 @@ footer::before {
   width: 100%;
 }
 
+/* Footer met section & ul */
+
 footer>section:first-of-type {
   display: flex;
   justify-content: center;
@@ -215,31 +217,6 @@ footer>section>ul>li {
   list-style-type: none;
 }
 
-footer>section>ul>li>a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: .6em;
-  padding: 1em .8em 1em .8em;
-  color: white;
-}
-
-footer>section>ul>li>a:hover {
-  text-decoration: underline solid white .7px;
-}
-
-footer>section>ul>li>a:focus {
-  text-decoration: underline solid white .7px;
-  outline: none;
-}
-
-footer>section>img:first-child {
-  width: 10em;
-  margin: 4em auto .8em auto;
-}
-footer>section>img:nth-of-type(2) {
-  width: 4em;
-  margin-bottom:4em;
-}
 
 /* Block-level Elements - Sections en articles */
 /* Sections pseudo */
@@ -311,8 +288,6 @@ section:nth-of-type(2)>article:nth-of-type(1) {
   padding: 2em;
   margin: auto;
 }
-
-
 
 section:nth-of-type(4)>article:nth-of-type(1) {
   display: flex;
@@ -472,11 +447,7 @@ h4 {
   text-align: center;
   color: var(--text-color);
   background: linear-gradient(90deg, rgba(212, 212, 212, 0.6797093837535014) 0%, rgba(255, 255, 255, 0.6797093837535014) 100%);
-}
-
-/* span om uitlijning gelijk te krijgen */
-span {
-  padding: 1em;
+    /* bron:https://cssgradient.io */
 }
 
 section:nth-of-type(4)>article>a>h4:hover {
@@ -484,10 +455,33 @@ section:nth-of-type(4)>article>a>h4:hover {
   color: var(--textwhite-color);
 }
 
+/* span om uitlijning gelijk te krijgen */
+span {
+  padding: 1em;
+}
+
+/* Atrributen - opmaak */
+
 section:nth-of-type(4)>article>a:focus {
   font-size: 1.2em;
 }
 
+footer>section>ul>li>a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .6em;
+  padding: 1em .8em 1em .8em;
+  color:var(--textwhite-color);
+}
+
+footer>section>ul>li>a:hover {
+  text-decoration: underline solid white .7px;
+}
+
+footer>section>ul>li>a:focus {
+  text-decoration: underline solid white .7px;
+  outline: none;
+}
 
 /* Button opmaak*/
 
@@ -536,7 +530,7 @@ section:nth-of-type(5)>h2 {
   text-align: center;
   font-size: 2em;
   text-transform: uppercase;
-  color: white;
+  color:var(--textwhite-color);
 }
 
 
@@ -571,9 +565,6 @@ section:nth-of-type(5)>article>p {
 
 /* Specifiek - Images */
 
-
-
-
 /* Pseudo selector- Images */
 
 section:nth-of-type(1)>article>img {
@@ -595,18 +586,15 @@ section:nth-of-type(2)>article>img:nth-of-type(2) {
   margin: auto;
 }
 
-@keyframes rotate-animation {
-  0% {
-    transform: rotate(0);
-  }
-
-
-  100% {
-    transform: rotate(-360deg);
-
-  }
+footer>section>img:first-child {
+  width: 10em;
+  margin: 4em auto .8em auto;
 }
 
+footer>section>img:nth-of-type(2) {
+  width: 4em;
+  margin-bottom: 4em;
+}
 
 section:nth-of-type(2)>article>img:nth-of-type(2):hover {
   animation-name: rotate-animation;
@@ -636,6 +624,7 @@ section:nth-of-type(2)>article>img:nth-of-type(3) {
   display: none;
 }
 
+/* class voor js, slider */
 section:nth-of-type(2)>article>img:nth-of-type(3).zichtbaar {
   position: absolute;
   display: block;
@@ -648,17 +637,6 @@ section:nth-of-type(4)>article>img:nth-of-type(1) {
   width: 3em;
   left: 1em;
   top: 1em;
-}
-
-
-@keyframes share-animation {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 section:nth-of-type(4)>article>img:hover {
@@ -682,7 +660,6 @@ section:nth-of-type(4)>article>img:nth-last-child(2n).facebookIcon {
 }
 
 /* assortiment images + animation - hover */
-
 section:nth-of-type(5)>article>img {
   width: 70%;
   padding: 1em;
@@ -690,15 +667,6 @@ section:nth-of-type(5)>article>img {
   transform: rotate(2deg);
 }
 
-@keyframes assortiment-animation {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.3);
-  }
-}
 
 section:nth-of-type(5)>article>img:hover {
   animation-name: assortiment-animation;
@@ -711,14 +679,14 @@ input {
   padding: .7em;
   background-color: var(--background-color);
   box-shadow: none;
-  color: white;
+  color: var(--textwhite-color);
   border-color: white;
   border-radius: 1.2em;
   border-style: solid;
 }
 
 input::placeholder {
-  color: white;
+  color: var(--textwhite-color);
 }
 
 input:hover {
@@ -733,7 +701,7 @@ input[type="search"] {
   background-size: 2.3em;
   background-position: .75em;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--textwhite-color);
   outline: none;
 }
 
@@ -774,7 +742,6 @@ section.menu {
   overflow: hidden;
 }
 
-
 main.recepten>section.ingredienten {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
@@ -786,10 +753,6 @@ main.recepten>section.ingredienten {
   background-image: none;
 }
 
-.recepten>section.ingredienten>article {
-  width: 100%;
-  display: flex;
-}
 
 main.recepten>section.ingredienten>article>ul {
   padding: 1em .5em 1em 1em;
@@ -820,7 +783,7 @@ section.ingredienten::after {
   padding: 2em;
 }
 
-
+/*Articles */
 
 main.recepten>section:nth-of-type(3)>article {
   display: flex;
@@ -831,26 +794,13 @@ main.recepten>section:nth-of-type(3)>article {
   flex-direction: row;
 }
 
-main.recepten>section:nth-of-type(3)>article>p {
-  line-height: 1.5em;
-  padding-left: .8em;
-  color: var(--textwhite-color);
-
+.recepten>section.ingredienten>article {
+  width: 100%;
+  display: flex;
 }
 
-section.menu>p {
-  display: none;
-}
 
-main.recepten>section.ingredienten>p {
-  font-size: 1.3em;
-  line-height: 1em;
-  position: relative;
-  width: 40%;
-  padding: 0;
-  margin: auto;
-  text-align: center;
-}
+/* Headings */
 
 section.ingredienten>h1 {
   font-size: 2em;
@@ -897,6 +847,28 @@ section.menu>h3 {
   text-align: center;
 }
 
+/* Paragraaf */
+main.recepten>section:nth-of-type(3)>article>p {
+  line-height: 1.5em;
+  padding-left: .8em;
+  color: var(--textwhite-color);
+
+}
+
+section.menu>p {
+  display: none;
+}
+
+main.recepten>section.ingredienten>p {
+  font-size: 1.3em;
+  line-height: 1em;
+  position: relative;
+  width: 40%;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+}
+
 /* image met opgemaakt frame */
 section.ingredienten>img:nth-of-type(1) {
   width: 32em;
@@ -905,29 +877,12 @@ section.ingredienten>img:nth-of-type(1) {
   grid-row-end: 5;
 }
 
-@keyframes image-animation {
-
-  50% {
-    transform: rotate(-5deg);
-  }
-
-
-}
-
 section.ingredienten>img:nth-of-type(1):hover {
   animation-name: image-animation;
   animation-duration: 2s;
 }
 
-section.ingredienten>img:nth-of-type(2) {
-  width: 5em;
-  padding: 0;
-}
 
-.recepten>section:nth-of-type(3)>article>img {
-  width: 4em;
-  height: 3.3em;
-}
 
 /* article met de social iconen - onder de header */
 .recepten>section:nth-of-type(1)>article:nth-of-type(1) {
@@ -940,12 +895,6 @@ section.ingredienten>img:nth-of-type(2) {
   flex-direction: row;
 }
 
-/* Social media iconen opmaak - onder de header */
-.recepten>section:nth-of-type(1)>article:nth-of-type(1)>a>img {
-  width: 5em;
-  height: 5em;
-  padding: 1em;
-}
 
 /* Hover Social media iconen opmaak - onder de header */
 .recepten>section:nth-of-type(1)>article:nth-of-type(1)>a:hover::before {
@@ -960,6 +909,8 @@ section.ingredienten>img:nth-of-type(2) {
   transform: scale(.8);
   outline: none;
 }
+
+/* Images */
 
 /* arrow left */
 section.menu>a:nth-of-type(1)>img {
@@ -977,10 +928,71 @@ section.menu>a:nth-of-type(2)>img {
   top: 5em;
 }
 
+/* Social media iconen opmaak - onder de header */
+.recepten>section:nth-of-type(1)>article:nth-of-type(1)>a>img {
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+}
+
 section.menu>a>img:hover {
   transform: scale(1.2);
 }
 
+section.ingredienten>img:nth-of-type(2) {
+  width: 5em;
+  padding: 0;
+}
+
+.recepten>section:nth-of-type(3)>article>img {
+  width: 4em;
+  height: 3.3em;
+}
+
+
+/* Keyframes */
+/* Pagina 1 - slider */
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+
+  100% {
+    transform: rotate(-360deg);
+
+  }
+}
+
+/* Pagina 2 - image met frame */
+@keyframes image-animation {
+
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Assortiment images */
+@keyframes assortiment-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+/* Share icon */
+@keyframes share-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /*Media query */
 
@@ -1017,17 +1029,14 @@ section.menu>a>img:hover {
     width: 10em;
     margin: 4em auto .8em auto;
   }
- 
+
   footer>section>img:nth-of-type(2) {
     width: 4em;
-    margin-bottom:4em;
+    margin-bottom: 4em;
   }
 
   footer>section>ul {
-
     margin: 1em auto 2em -.8em;
-
-
   }
 
   footer>section:first-of-type {
